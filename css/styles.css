@@ -82,6 +82,7 @@ section {
     margin-right: 30px;
     margin-top: 10px;
     font-size: x-large;
+    cursor: pointer;
 }
 
 .navbar__menu .menu__link {
