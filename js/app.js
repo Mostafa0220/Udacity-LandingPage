@@ -11,47 +11,52 @@
  * 
  * JS Standard: ESlint
  * 
-*/
+ */
 
 /**
  * Define Global Variables
  * 
-*/
-
-
+ */
+let navUnorderedList = document.getElementById("nav-unordered-list");
+let sectionsCount = document.getElementsByClassName("landing__container").length;
 /**
  * End Global Variables
- * Start Helper Functions
  * 
-*/
+ */
+
+//Build the to nav menu dynamically
+for (i = 1; i < sectionsCount + 1; i++) {
+    //get section title dynamicly 
+    let sectionTitle = document.querySelector("#section" + i + "-title").textContent;
+
+    //create li element with the dynamic title
+    let navItem = document.createElement("li");
+    let navItemTitle = document.createTextNode(sectionTitle);
+
+    //assign id attribute to the new li element
+    let navItemSelector = "nav-item" + i;
+    navItem.setAttribute("id", navItemSelector);
+
+    //append the new li element to the nav unordered list
+    navItem.appendChild(navItemTitle);
+    navUnorderedList.appendChild(navItem);
+    //console.log(navItem);
 
 
+    // Scroll to target section on list item click
+    let targetSection = document.getElementById("section" + i);
+    let navAnchorId = document.getElementById(navItemSelector);
 
-/**
- * End Helper Functions
- * Begin Main Functions
- * 
-*/
+    // Add Listener to scroll to target section on click
+    navAnchorId.addEventListener("click", function() {
+        targetSection.scrollIntoView();
 
-// build the nav
+    });
+}
 
 
 // Add class 'active' to section when near top of viewport
 
 
-// Scroll to anchor ID using scrollTO event
-
-
-/**
- * End Main Functions
- * Begin Events
- * 
-*/
-
-// Build menu 
-
-// Scroll to section on link click
 
 // Set sections as active
-
-
