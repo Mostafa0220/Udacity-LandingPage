@@ -72,12 +72,16 @@ section {
 
 .navbar__menu ul {
     padding-left: 0;
+    padding-right: 20px;
     margin: 0;
     text-align: right;
 }
 
 .navbar__menu li {
     display: inline-block;
+    margin-right: 30px;
+    margin-top: 10px;
+    font-size: x-large;
 }
 
 .navbar__menu .menu__link {
@@ -98,11 +102,15 @@ section {
 /* Header Styles */
 
 .page__header {
-    background: #fff;
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 5;
+    background-color: #0000A3;
+    min-height: 50px;
+    border-bottom: 1px solid #cc1;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 10;
 }
 
 
