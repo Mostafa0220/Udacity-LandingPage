@@ -33,7 +33,7 @@ To get started and run the project, open `index.html`
 - Code Quality: Code is formatted with consistent, logical, and easy-to-read formatting as described in the [Udacity JavaScript Style Guide](http://udacity.github.io/frontend-nanodegree-styleguide/javascript.html).
 
 ## Refrences
-
+- [javascripttutorial.net](https://www.javascripttutorial.net/dom/css/check-if-an-element-is-visible-in-the-viewport/#:~:text=Use%20the%20getBoundingClientRect()%20method%20to%20get%20the%20size%20of,in%20the%20viewport%20or%20not)
 - [w3schools.com](https://www.w3schools.com/howto/howto_js_scroll_to_top.asp)
 - [canva.com](https://www.canva.com/colors/color-meanings/blue/)
 - [developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav)

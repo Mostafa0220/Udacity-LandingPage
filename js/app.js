@@ -81,13 +81,29 @@ function scrollFunction() {
 backToTopBtn.addEventListener("click", function() {
     window.scrollTo({ top: 0, behavior: "smooth" });
 });
+//Checks if section is in view and adds active class 
+/* https://www.javascripttutorial.net/dom/css/check-if-an-element-is-visible-in-the-viewport/#:~:text=Use%20the%20getBoundingClientRect()%20method%20to%20get%20the%20size%20of,in%20the%20viewport%20or%20not. */
 
+let isInViewport = function(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+};
+document.addEventListener('scroll', function() {
+    for (let i = 1; i < sectionsCount + 1; i++) {
+        let currentSection = document.getElementById("section" + i);
+        // Add class 'active' to section when near top of viewport
+        if (isInViewport(currentSection)) {
+            currentSection.classList.add("active");
+        } else {
+            currentSection.classList.remove("active");
+        }
+    }
 
-// Add class 'active' to section when near top of viewport
-
-
-
-// Set sections as active
-
-
-// Set sections as active
+}, {
+    passive: true
+});
