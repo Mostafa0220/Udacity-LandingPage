@@ -28,7 +28,7 @@ const backToTopBtn = document.getElementById("back-to-top-btn");
  */
 
 //Build the to nav menu dynamically
-for (i = 1; i < sectionsCount + 1; i++) {
+for (let i = 1; i < sectionsCount + 1; i++) {
     //get section title dynamicly 
     let sectionTitle = document.querySelector("#section" + i + "-title").textContent;
 
