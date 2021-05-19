@@ -49,7 +49,10 @@ for (i = 1; i < sectionsCount + 1; i++) {
 
     // Add Listener to scroll to target section on click
     navAnchorId.addEventListener("click", function() {
-        targetSection.scrollIntoView();
+        targetSection.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
 
     });
 }
