@@ -21,6 +21,7 @@ let navUnorderedList = document.getElementById("nav-unordered-list");
 let sectionsCount = document.getElementsByClassName("landing__container").length;
 //Get the back to top button
 const backToTopBtn = document.getElementById("back-to-top-btn");
+
 /**
  * End Global Variables
  * 
@@ -67,6 +68,7 @@ for (i = 1; i < sectionsCount + 1; i++) {
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() { scrollFunction() };
 
+
 function scrollFunction() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         backToTopBtn.style.display = "block";
@@ -76,10 +78,9 @@ function scrollFunction() {
 }
 
 // When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-}
+backToTopBtn.addEventListener("click", function() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+});
 
 
 // Add class 'active' to section when near top of viewport
